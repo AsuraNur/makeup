@@ -9,17 +9,19 @@ public class Main {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String material;
     private String color;
+    private String material;
+    private String size;
 
     public Main() {
     }
 
-    public Main(String name, String material, String color) {
+    public Main(String name, String material, String color, String size) {
         this.id = id;
         this.name = name;
-        this.material = material;
         this.color = color;
+        this.material = material;
+        this.size = size;
     }
 
     public Long getId() {
@@ -30,12 +32,16 @@ public class Main {
         return name;
     }
 
+    public String getColor() {
+        return color;
+    }
+
     public String getMaterial() {
         return material;
     }
 
-    public String getColor() {
-        return color;
+    public String getSize() {
+        return size;
     }
 
     public void setId(Long id) {
@@ -46,12 +52,15 @@ public class Main {
         this.name = name;
     }
 
-    public void setMaterial(String material) {
-        this.material = material;
-    }
-
     public void setColor(String color) {
         this.color = color;
     }
 
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
 }

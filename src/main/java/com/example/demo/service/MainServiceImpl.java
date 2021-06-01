@@ -40,8 +40,9 @@ public class MainServiceImpl implements MainService {
         return mainRepository.findById(id)
                 .map(main -> {
                     main.setName(c.getName());
-                    main.setMaterial(c.getMaterial());
                     main.setColor(c.getColor());
+                    main.setMaterial(c.getMaterial());
+                    main.setSize(c.getSize());
                     return mainRepository.save(main);
                 })
                 .orElseGet(() -> {
